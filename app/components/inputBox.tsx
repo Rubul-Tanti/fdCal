@@ -21,7 +21,7 @@ const InputBox=({setFinalResult,form,setForm}:{form:INITIALSTATE,setForm:React.D
 
 
 
-    return <div className="max-w-4xl w-full min-w-xl p-5">
+    return <div className="max-w-3xl w-full min-w-xl p-5">
         <h1 className="text-4xl text-[#b38e72] ">FD Calculator</h1>
                 <p className="text-xs text-zinc-400">Estimate How much your fixed deposit investment  will grow over time</p>
 
@@ -62,7 +62,7 @@ const InputBox=({setFinalResult,form,setForm}:{form:INITIALSTATE,setForm:React.D
                     </div>
                         <div className="flex justify-between gap-8">
                             {(Object.keys(intrestPayout) as INTRESTPAYOUT[]).map((item)=>{
-                                return <button onClick={()=>setForm(p=>({...p,intrestPayout:item}))} className={`border p-2 rounded-xl text-xs ${form.intrestPayout==item?"bg-[#b38e72] text-white":"bg-[#ebebeb] text-[#b38e72]"}`}>{item}</button>
+                                return <button key={item} onClick={()=>setForm(p=>({...p,intrestPayout:item}))} className={`border p-2 rounded-xl text-xs ${form.intrestPayout==item?"bg-[#b38e72] text-white":"bg-[#ebebeb] text-[#b38e72]"}`}>{item}</button>
                             })}
                         </div>
                 </div>
@@ -83,7 +83,7 @@ const InputBox=({setFinalResult,form,setForm}:{form:INITIALSTATE,setForm:React.D
             </div>
 
             </div>
-            <button className="border  bg-[#b38e72] p-2 mt-5 rounded-full" onClick={()=>{calFD(form);setFinalResult(form)}}>Calculate</button>
+            <button className="border-none text-white bg-[#b38e72] p-2 mt-5 rounded-full" onClick={()=>{calFD(form);setFinalResult(form)}}>Calculate</button>
 
     </div>
 }

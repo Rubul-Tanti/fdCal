@@ -8,8 +8,8 @@ const Graph=({form}:{form:INITIALSTATE})=>{
         const cmd=calFD(form,i)
         return {year:i,intrest:cmd.compoundIntrest,amount:cmd.amount}
     })
-    return<div className="w-full bg-[#d1b39b] p-5">
-            <header className="flex gap-14">
+    return<div className="w-full min-w-2xl bg-[#d1b39b] p-5">
+            <header className="flex text-white gap-14">
                 <div>
                     <h3 className="text-sm">Maturity Amount</h3>
                     <p className="text-2xl font-semibold">{cmd.amount}</p>
