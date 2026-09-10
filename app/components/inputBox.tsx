@@ -32,7 +32,7 @@ const InputBox=({setFinalResult,form,setForm}:{form:INITIALSTATE,setForm:React.D
                 <input value={form.depositAmount}
                 onChange={(e)=>{setForm(p=>({...p,depositAmount:Number(e.target.value)}))}} className="w-18" type="number" placeholder="deposit amount"/>
                 </div>
-                <input onChange={(e)=>{setForm(p=>({...p,depositAmount:Number(e.target.value)}))}} className="w-full" type="range"/>
+                <input onChange={(e)=>{setForm(p=>({...p,depositAmount:Number(e.target.value)}))}} className="w-full accent-[#e6cdba]" type="range"/>
                 <div className="flex text-xs mt-2 justify-between">
                     <span>10000</span>
                     <span>2445000</span>
@@ -46,7 +46,7 @@ const InputBox=({setFinalResult,form,setForm}:{form:INITIALSTATE,setForm:React.D
                 value={form.rate_of_return}
                 onChange={(e)=>{setForm(p=>({...p,rate_of_return:Number(e.target.value)}))}} className="w-18" type="number" placeholder="rate of return"/>
                 </div>
-                <input   onChange={(e)=>{setForm(p=>({...p,rate_of_return:Number(e.target.value)}))}}  className="w-full" type="range"/>
+                <input   onChange={(e)=>{setForm(p=>({...p,rate_of_return:Number(e.target.value)}))}}  className="w-full accent-[#e6cdba]" type="range"/>
                 <div className="flex text-xs mt-2 justify-between">
                     <span>5%</span>
                     <span>17%</span>
@@ -74,7 +74,7 @@ const InputBox=({setFinalResult,form,setForm}:{form:INITIALSTATE,setForm:React.D
                 onChange={(e)=>{setForm(p=>({...p,timePeriod:Number(e.target.value)}))}}
                 className="w-18 " type="number" placeholder="deposit amount"/>
                 </div>
-                <input onChange={(e)=>{setForm(p=>({...p,timePeriod:Number(e.target.value)}))}}  className="w-full" type="range"/>
+                <input onChange={(e)=>{setForm(p=>({...p,timePeriod:Number(e.target.value)}))}}  className="w-full accent-[#e6cdba]  " type="range"/>
                 <div className="flex text-xs mt-2 justify-between">
                     <span>1</span>
                     <span>25</span>
