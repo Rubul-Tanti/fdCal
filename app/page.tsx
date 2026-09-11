@@ -27,7 +27,7 @@ export default function Home() {
   const [finalResult,setFinalResult]=useState(initialState)
 
   return (
-<div className="mx-auto p-5  flex items-center justify-center h-screen w-full max-w-7xl">
+<div className="mx-auto p-5  flex items-center justify-center h-screen w-full max-w-7xl overflow-hidden">
   <main className="flex bg-white gap-8 ">
     {/* input  */}
       <InputBox setFinalResult={setFinalResult} form={form} setForm={setForm}/>

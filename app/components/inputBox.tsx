@@ -21,33 +21,33 @@ const InputBox=({setFinalResult,form,setForm}:{form:INITIALSTATE,setForm:React.D
 
 
 
-    return <div className="max-w-3xl w-full min-w-xl p-5">
-        <h1 className="text-4xl text-[#b38e72] ">FD Calculator</h1>
+    return <div className="min-w-xl w-full  p-8">
+        <h1 className="text-3xl text-[#b38e72] mb-4">FD Calculator</h1>
                 <p className="text-xs text-zinc-400">Estimate How much your fixed deposit investment  will grow over time</p>
 
             <div>
-            <div className="mt-2 text-[#a5968f] w-full">
+            <div className="mt-8 text-[#a5968f] w-full">
                 <div className="flex  justify-between">
                 <h2 >Deposit Amount</h2>
                 <input value={form.depositAmount}
-                onChange={(e)=>{setForm(p=>({...p,depositAmount:Number(e.target.value)}))}} className="w-18" type="number" placeholder="deposit amount"/>
+                onChange={(e)=>{setForm(p=>({...p,depositAmount:Number(e.target.value)}))}} className="w-18 bg-[#f7f6f5] rounded-full" type="number" placeholder="deposit amount"/>
                 </div>
-                <input onChange={(e)=>{setForm(p=>({...p,depositAmount:Number(e.target.value)}))}} className="w-full accent-[#e6cdba]" value={form.depositAmount} min={10000} max={5000000} type="range"/>
-                <div className="flex text-xs mt-2 justify-between">
+                <input onChange={(e)=>{setForm(p=>({...p,depositAmount:Number(e.target.value)}))}} className="w-full mt-4 accent-[#e6cdba]" value={form.depositAmount} min={10000} max={5000000} type="range"/>
+                <div className="flex text-[10px] mt-2 justify-between">
                     <span>10000</span>
                     <span>2445000</span>
                     <span>50000000</span>
                 </div>
             </div>
-            <div className="mt-2 text-[#a5968f]  w-full">
+            <div className="mt-8 text-[#a5968f]  w-full">
                 <div className="flex  justify-between">
                 <h2>Rate of Return (%)</h2>
                 <input
                 value={form.rate_of_return}
-                onChange={(e)=>{setForm(p=>({...p,rate_of_return:Number(e.target.value)}))}} className="w-18" type="number" placeholder="rate of return" />
+                onChange={(e)=>{setForm(p=>({...p,rate_of_return:Number(e.target.value)}))}} className="w-18 bg-[#f7f6f5] rounded-full" type="number" placeholder="rate of return" />
                 </div>
-                <input   onChange={(e)=>{setForm(p=>({...p,rate_of_return:Number(e.target.value)}))}}  className="w-full accent-[#e6cdba]" value={form.rate_of_return} min={5} max={30} type="range"/>
-                <div className="flex text-xs mt-2 justify-between">
+                <input   onChange={(e)=>{setForm(p=>({...p,rate_of_return:Number(e.target.value)}))}}  className="w-full mt-4 accent-[#e6cdba]" value={form.rate_of_return} min={5} max={30} type="range"/>
+                <div className="flex text-[10px] mt-2 justify-between">
                     <span>5%</span>
                     <span>17%</span>
                     <span>30%</span>
@@ -55,10 +55,10 @@ const InputBox=({setFinalResult,form,setForm}:{form:INITIALSTATE,setForm:React.D
             </div>
 
 
-                <div className=" gap-3 flex text-[#a5968f] justify-between mt-2">
+                <div className=" gap-3 flex text-[#a5968f] justify-between mt-8">
                     <div>
                 <h1 >Intrest Payout</h1>
-                    <p className="text-xs text-zinc-400 ">comulative rate of intrest</p>
+                    <p className="text-[10px] text-zinc-400 ">comulative rate of intrest</p>
                     </div>
                         <div className="flex justify-between gap-8">
                             {(Object.keys(intrestPayout) as INTRESTPAYOUT[]).map((item)=>{
@@ -66,15 +66,15 @@ const InputBox=({setFinalResult,form,setForm}:{form:INITIALSTATE,setForm:React.D
                             })}
                         </div>
                 </div>
-                  <div className="mt-4 text-[#a5968f] w-full">
+                  <div className="mt-8 text-[#a5968f] w-full">
                 <div className="flex  justify-between">
                 <h2>Time Period (Years)</h2>
                 <input
                     value={form.timePeriod}
                 onChange={(e)=>{setForm(p=>({...p,timePeriod:Number(e.target.value)}))}}
-                className="w-18 " type="number" placeholder="deposit amount"/>
+                className="w-18 bg-[#f7f6f5] rounded-full" type="number" placeholder="deposit amount"/>
                 </div>
-                <input value={form.timePeriod} onChange={(e)=>{setForm(p=>({...p,timePeriod:Number(e.target.value)}))}}  className="w-full accent-[#e6cdba]  " min={1} max={50} type="range"/>
+                <input value={form.timePeriod} onChange={(e)=>{setForm(p=>({...p,timePeriod:Number(e.target.value)}))}}  className="w-full mt-4 accent-[#e6cdba]  " min={1} max={50} type="range"/>
                 <div className="flex text-xs mt-2 justify-between">
                     <span>1</span>
                     <span>25</span>

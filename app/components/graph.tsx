@@ -8,7 +8,7 @@ const Graph=({form}:{form:INITIALSTATE})=>{
         const cmd=calFD(form,i)
         return {year:i,intrest:cmd.compoundIntrest,amount:cmd.amount}
     })
-    return<div className="w-full min-w-2xl bg-[#d1b39b] p-5">
+    return<div className="w-full min-w-2xl  bg-[#d1b39b] p-8">
             <header className="flex text-white gap-14">
                 <div>
                     <h3 className="text-sm">Maturity Amount</h3>
@@ -21,7 +21,7 @@ const Graph=({form}:{form:INITIALSTATE})=>{
 
 
             </header>
-        <div className="bg-white p-4 mt-14 rounded-xl">
+        <div className="bg-white p-4 mt-6 rounded-2xl">
 
             <div className="flex gap-5"> <div className="text-black flex items-center gap-2 text-sm"><div className="h-2 w-2 bg-[#6b5c53]"></div>Selected Year</div>
 
@@ -31,8 +31,8 @@ const Graph=({form}:{form:INITIALSTATE})=>{
             </div>
 
                 <BarChart
-                className="w-full mt-4"
-      style={{ width: '100%', maxHeight: '70vh', aspectRatio: 1.618 }}
+                className="w-full h-[200] mt-4"
+      style={{ width: '100%', aspectRatio: 1.618 }}
       responsive
       data={data}
       margin={{
@@ -43,8 +43,8 @@ const Graph=({form}:{form:INITIALSTATE})=>{
       }}
     >
       <XAxis dataKey="year" niceTicks="snap125" />
-      <YAxis width="auto" niceTicks="snap125" />
-      <Bar fill="#e6cdba" dataKey="amount" className="rounded-lg text-[#e6cdba]" barSize={60}  />
+      <YAxis width="auto"   niceTicks="snap125" />
+      <Bar fill="#e6cdba" dataKey="amount" radius={5} className="rounded-lg text-[#e6cdba]" barSize={80}  />
     </BarChart>
         </div>
     </div>
